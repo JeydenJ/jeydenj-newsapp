@@ -3,16 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 33, 37, 41; /* Dark gray for text */
+  --background-start-rgb: 248, 249, 250; /* Light gray background */
+  --background-end-rgb: 255, 255, 255; /* White background */
+  --link-color: 0, 123, 255; /* Blue color for links */
+  --link-hover-color: 0, 102, 204; /* Darker blue for link hover */
+  --border-color: 224, 224, 224; /* Light gray for borders */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 255, 255; /* White text for dark mode */
+    --background-start-rgb: 34, 34, 34; /* Dark gray background */
+    --background-end-rgb: 12, 12, 12; /* Almost black background */
+    --link-color: 0, 139, 255; /* Brighter blue for links in dark mode */
+    --link-hover-color: 0, 104, 255; /* Darker blue for link hover in dark mode */
+    --border-color: 48, 48, 48; /* Dark gray for borders in dark mode */
   }
 }
 
@@ -20,18 +26,32 @@ body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
-      transparent,
+      rgb(var(--background-start-rgb)),
       rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    );
 }
+
 input {
-  border: 2px solid red;
-  background-color: rgba(255, 0, 0, 0.1); /* Light red background for visibility */
+  border: 2px solid rgb(var(--border-color));
+  background-color: rgba(0, 0, 0, 0.05); /* Light gray background for inputs */
+}
+
+a {
+  color: rgb(var(--link-color)); /* Blue color for links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+  color: rgb(var(--link-hover-color)); /* Darker blue for link hover */
+  text-decoration: underline; /* Underline on hover for better accessibility */
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .border-custom {
+    border: 2px solid rgb(var(--border-color));
   }
 }

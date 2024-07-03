@@ -45,29 +45,29 @@ const NewsArticle: React.FC<ArticleProps> = ({
   };
 
   return (
-    <div className="p-4 border border-gray-200 rounded-md shadow-md">
-      <div className="mb-2">
+    <div className="p-6 border border-gray-300 rounded-lg shadow-lg bg-white max-w-6xl mx-auto">
+      <div className="flex flex-col mb-4">
         {isEditingTitle ? (
           <div className="flex flex-col">
             <input
               type="text"
               value={editedTitle}
               onChange={handleTitleChange}
-              className="border border-gray-300 p-2 rounded-md w-full mb-2"
+              className="border border-gray-400 p-3 rounded-md mb-2 text-gray-700 focus:outline-none focus:border-blue-500"
             />
             <button
               onClick={handleTitleSave}
-              className="text-blue-500 hover:underline"
+              className="self-start bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
             >
               Save Title
             </button>
           </div>
         ) : (
-          <div className="flex justify-between items-center">
-            <h2 className="text-xl font-semibold">{title}</h2>
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-xl font-bold text-gray-800">{title}</h2>
             <button
               onClick={() => setIsEditingTitle(true)}
-              className="text-blue-500 hover:underline"
+              className="text-blue-500 hover:text-blue-600 font-medium"
             >
               Edit Title
             </button>
@@ -75,28 +75,28 @@ const NewsArticle: React.FC<ArticleProps> = ({
         )}
       </div>
 
-      <div className="mb-2">
+      <div className="flex flex-col mb-4">
         {isEditingAuthor ? (
           <div className="flex flex-col">
             <input
               type="text"
               value={editedAuthor}
               onChange={handleAuthorChange}
-              className="border border-gray-300 p-2 rounded-md w-full mb-2"
+              className="border border-gray-400 p-3 rounded-md mb-2 text-gray-700 focus:outline-none focus:border-blue-500"
             />
             <button
               onClick={handleAuthorSave}
-              className="text-blue-500 hover:underline"
+              className="self-start bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
             >
               Save Author
             </button>
           </div>
         ) : (
-          <div className="flex justify-between items-center">
+          <div className="flex items-center justify-between mb-2">
             <p className="text-gray-600">By {author}</p>
             <button
               onClick={() => setIsEditingAuthor(true)}
-              className="text-blue-500 hover:underline"
+              className="text-blue-500 hover:text-blue-600 font-medium"
             >
               Edit Author
             </button>
@@ -104,10 +104,10 @@ const NewsArticle: React.FC<ArticleProps> = ({
         )}
       </div>
 
-      <p className="text-gray-500 mb-2">{new Date(publishedAt).toLocaleDateString()}</p>
-      <p className="mb-2">{description}</p>
-      <p className="text-blue-600 mb-2">Source: {source}</p>
-      <a href={url} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+      <p className="text-gray-500 mb-4">{new Date(publishedAt).toLocaleDateString()}</p>
+      <p className="mb-4 text-gray-700">{description}</p>
+      <p className="text-blue-600 mb-4">Source: {source}</p>
+      <a href={url} className="text-blue-500 hover:text-blue-600" target="_blank" rel="noopener noreferrer">
         Read full article
       </a>
     </div>
