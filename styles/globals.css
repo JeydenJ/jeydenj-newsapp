@@ -25,6 +25,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+input {
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.1); /* Light red background for visibility */
+}
 
 @layer utilities {
   .text-balance {
