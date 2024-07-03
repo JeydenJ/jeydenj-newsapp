@@ -1,5 +1,6 @@
 {
   "name": "jeydenj-newsapp",
+<<<<<<< HEAD
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -34,4 +35,14 @@
     "tailwindcss": "^3.4.4",
     "typescript": "^5.5.3"
   }
+=======
+  "version": "1.0.0",
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+>>>>>>> 23f9912e8cb5f18080d5e95668efa006a64a203f
 }
