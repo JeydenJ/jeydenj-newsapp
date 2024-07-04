@@ -1,9 +1,22 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Project Overview
+This project is a news application that fetches and displays the latest news headlines using the News API from https://newsapi.org/. It allows users to search for articles and view details about each article.
+
 
 ## Getting Started
+1. Install Dependencies
+```bash
+npm install
+```
+2. Create .env file in the root directory of the project.
+   
+Get News API Key from this site: https://newsapi.org/
 
-First, run the development server:
-
+Add the following line to the .env file, replacing (YOUR NEWS API KEY HERE) with your actual News API key:
+```bash
+NEXT_PUBLIC_NEWS_API_KEY=(YOUR NEWS API KEY HERE)
+```
+3. Run the development server:
 ```bash
 npm run dev
 # or
