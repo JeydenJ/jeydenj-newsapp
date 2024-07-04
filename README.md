@@ -12,9 +12,9 @@ npm install
    
 Get News API Key from this site: https://newsapi.org/
 
-Add the following line to the .env file, replacing (YOUR NEWS API KEY HERE) with your actual News API key:
+Add the following line to the .env file, replacing YOUR_NEWS_API_KEY_HERE with your actual News API key:
 ```bash
-NEXT_PUBLIC_NEWS_API_KEY=(YOUR NEWS API KEY HERE)
+NEXT_PUBLIC_NEWS_API_KEY=YOUR_NEWS_API_KEY_HERE
 ```
 3. Run the development server:
 ```bash
